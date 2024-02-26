@@ -1,0 +1,54 @@
+.header {
+  position: relative;
+  background-color: var(--secondary-background-color);
+}
+
+.header__inner {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: var(--main-padding-sides);
+  margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .header__inner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.header__brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin: 1.5em 0;
+}
+
+.header__toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.header__toggle__icon,
+.header__toggle__icon--open {
+  margin: 1.5em 0;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.header__toggle__icon--open {
+  transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 600px) {
+  .header__toggle__icon,
+  .header__toggle__icon--open {
+    display: none;
+  }
+}
